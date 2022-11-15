@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <script src="app.js" defer></script>
+    <title>Toomanytodos</title>
+</head>
+<body class="blood-body">
+    
+    <header>
+        <h1>Blood Sugar Log</h1>
+    </header>
+    <form action="" class="todo-form">
+        <input type="text" placeholder="Blood sugar" class="todo-input">
+        <input type="text" placeholder="date/time" class="todo-date">
+        <script src="https://cdn.jsdelivr.net/npm/flatpickr"> </script>
+       <script>
+            config = {
+                enableTime: true,
+                dateFormat: "Y-m-d H:i",
+                altInput: true,
+                altFormat: "F j, Y h:SK"
+            }
+            flatpickr(".todo-date", config)
+        </script>
+        <select class="time-of-day">
+            <option value="Waking">Waking</option>
+            <option value="Before Meal">Before Meal</option>
+            <option value="After Meal">After Meal</option>
+            <option value="Bedtime">Bedtime</option>
+        </select>
+        <input type="text" value="note" placeholder="Note" class="todo-note">
+        <button class="submit-btn">Submit</button>
+    </form> 
+    <div class="blood-drop"></div>
+    <h4 class="title">Logged:</h4>
+    <div class="todo-div">
+        <ul class="todo-list"></ul>
+    </div>
+
+   <h4 class="averages">AVERAGES</h4>
+   <div class="all-averages">
+   <div class="display-averages"></div>
+    <div class="waking-averages"></div>
+    <div class="before-meal-div"></div>
+    <div class="after-meal-div"></div>
+    <div class="bedtime-div"></div>
+</div>
+
+
+
+</body>
+</html>
