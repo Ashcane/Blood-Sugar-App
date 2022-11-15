@@ -20,7 +20,7 @@ todoDiv.addEventListener('click', deLete)
 function addtodo(e) {
     e.preventDefault()
     if (isNaN(todoInput.value)) {
-        alert('blood sugar must be a number')
+        alert('blood sugar should be a number')
     } else if (todoInput.value == '') {
         alert('please enter all fields') 
     } else {
